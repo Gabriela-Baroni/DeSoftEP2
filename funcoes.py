@@ -11,3 +11,14 @@ def rolar_dados(quant):
         lista.append(sorteio)
         i = i + 1
     return lista
+
+#recebe: uma lista de dados rolados, uma lista de dados já guardados e um número inteiro representado o índice do dado a ser armazenado
+#retorna: uma lista com dois valores, o primeiro valor representando a lista de dados rolados e o segundo representando a lista de dados armazenados no estoque
+
+def guardar_dado(rolados,guardados,indice):
+    novo_guardados = [guardados]
+    novo_rolados = [rolados]
+    novo_guardados.append(rolados[indice])
+    novo_rolados.remove(rolados[indice])
+    lista_final = [novo_rolados,novo_guardados]
+    return lista_final
