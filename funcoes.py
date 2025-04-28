@@ -43,26 +43,26 @@ def remover_dado(rolados,guardados,indice2):
 #retorna: dicionário com o cálculo dos pontos de acordo com o que foi descrito acima
 
 def calcula_pontos_regra_simples(faces):
+    dicionario = {}
+    dicionario [1] = 0
+    dicionario [2] = 0
+    dicionario [3] = 0
+    dicionario [4] = 0
+    dicionario [5] = 0
+    dicionario [6] = 0
     for i in faces:
-        dicionario = {}
-        dicionario [1] = 0
-        dicionario [2] = 0
-        dicionario [3] = 0
-        dicionario [4] = 0
-        dicionario [5] = 0
-        dicionario [6] = 0
         if i == 1:
             dicionario[1] += 1
         if i == 2:
-            dicionario[1] += 2
+            dicionario[2] += 2
         if i == 3:
-            dicionario[1] += 3
+            dicionario[3] += 3
         if i == 4:
-            dicionario[1] += 4
+            dicionario[4] += 4
         if i == 5:
-            dicionario[1] += 5
+            dicionario[5] += 5
         if i == 6:
-            dicionario[1] += 6
+            dicionario[6] += 6
 
         return dicionario
 
