@@ -28,3 +28,14 @@ def guardar_dado(rolados,guardados,indice):
     del(rolados[indice])
     lista_final = [rolados,novo_guardados]
     return lista_final
+
+#retorna: uma lista com dois valores, o primeiro elemento da lista representando a lista de dados rolados e o segundo elemento representando a lista de dados armazenados no estoque
+
+def remover_dado(rolados,guardados,indice2):
+    lista_final2 = []
+    novo_rolados = []
+    
+    novo_rolados.append(rolados[indice2])
+    del(guardados[indice2])
+    lista_final2 = [novo_rolados,guardados]
+    return lista_final2
