@@ -35,7 +35,7 @@ def remover_dado(rolados,guardados,indice2):
     lista_final2 = []
     novo_rolados = []
     
-    novo_rolados.append(rolados[indice2])
+    novo_rolados.append(guardados[indice2])
     del(guardados[indice2])
     lista_final2 = [novo_rolados,guardados]
     return lista_final2
