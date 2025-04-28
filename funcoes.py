@@ -38,3 +38,31 @@ def remover_dado(rolados,guardados,indice2):
     del(guardados[indice2])
     lista_final2 = [rolados,guardados]
     return lista_final2
+
+#recebe: uma lista de números inteiros representando as faces dos dados rolados
+#retorna: dicionário com o cálculo dos pontos de acordo com o que foi descrito acima
+
+def calcula_pontos_regra_simples(faces):
+    for i in faces:
+        dicionario = {}
+        dicionario [1] = 0
+        dicionario [2] = 0
+        dicionario [3] = 0
+        dicionario [4] = 0
+        dicionario [5] = 0
+        dicionario [6] = 0
+        if i == 1:
+            dicionario[1] += 1
+        if i == 2:
+            dicionario[1] += 2
+        if i == 3:
+            dicionario[1] += 3
+        if i == 4:
+            dicionario[1] += 4
+        if i == 5:
+            dicionario[1] += 5
+        if i == 6:
+            dicionario[1] += 6
+
+        return dicionario
+
