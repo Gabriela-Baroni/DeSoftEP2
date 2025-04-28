@@ -16,9 +16,15 @@ def rolar_dados(quant):
 #retorna: uma lista com dois valores, o primeiro valor representando a lista de dados rolados e o segundo representando a lista de dados armazenados no estoque
 
 def guardar_dado(rolados,guardados,indice):
-    novo_guardados = [guardados]
-    novo_rolados = [rolados]
+    lista_final = []
+    novo_guardados = []
+
+    i = 0
+    while i < len(guardados):
+        novo_guardados.append(guardados[i])
+        i = i + 1
+    
     novo_guardados.append(rolados[indice])
-    del(novo_rolados[indice])
-    lista_final = [novo_rolados,novo_guardados]
+    del(rolados[indice])
+    lista_final = [rolados,novo_guardados]
     return lista_final
