@@ -19,6 +19,6 @@ def guardar_dado(rolados,guardados,indice):
     novo_guardados = [guardados]
     novo_rolados = [rolados]
     novo_guardados.append(rolados[indice])
-    novo_rolados.remove(rolados[indice])
+    novo_rolados.del(rolados[indice])
     lista_final = [novo_rolados,novo_guardados]
     return lista_final
