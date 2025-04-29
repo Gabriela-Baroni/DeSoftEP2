@@ -73,3 +73,10 @@ def calcula_pontos_regra_simples(faces):
 
     return dicionario
 
+def calcula_pontos_soma(faces):
+    soma = 0
+    for i in faces:
+        soma = soma + i
+    return soma
+
+
