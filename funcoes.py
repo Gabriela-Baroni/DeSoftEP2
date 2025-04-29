@@ -88,14 +88,19 @@ def calcula_pontos_sequencia_baixa(faces):
         for i in faces:
             if i not in faces_nova:
                 faces_nova.append(i)
-    
+        contagem = 1
         faces_nova.sort()
         for j in faces_nova:
-            for j in range(1,4):
-                if faces_nova[j + 1] == j + 1 and faces_nova[j + 2] == j + 2 and faces_nova[j + 3] == j + 3 and faces_nova[j + 4] == j + 4:
-                    return 15
-                else:
-                    return 0
+            if faces_nova[j] + 1 == faces_nova[j + 1]:
+                    contagem = contagem + 1
+            else:
+                if contagem < 4:
+                    contagem = 0
+        if contagem >= 4:
+                return 15
+        else:
+                return 0
+               
     
         
 
