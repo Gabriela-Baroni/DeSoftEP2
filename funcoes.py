@@ -61,7 +61,7 @@ def calcula_pontos_regra_simples(faces):
         if i == 5:
             indice5 += 5
         if i == 6:
-            dicionario[6] += 6
+            indice6 += 6
 
     dicionario = {}
     dicionario [1] = indice1
