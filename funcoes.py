@@ -83,18 +83,19 @@ def calcula_pontos_soma(faces):
 def calcula_pontos_sequencia_baixa(faces):
     if len(faces) < 4:
         return 0
-    faces_nova = []
-    for i in faces:
-        if i not in faces_nova:
-            faces_nova.append(i)
-
-    else:
+    else: 
+        faces_nova = []
+        for i in faces:
+            if i not in faces_nova:
+                faces_nova.append(i)
+    
         faces_nova.sort()
         for j in faces_nova:
-            if faces_nova[j + 1] == j + 1 and faces_nova[j + 2] == j + 2 and faces_nova[j + 3] == j + 3 and faces_nova[j + 4] == j + 4:
-                return 15
-            else:
-                return 0
+            for j in range(1,4):
+                if faces_nova[j + 1] == j + 1 and faces_nova[j + 2] == j + 2 and faces_nova[j + 3] == j + 3 and faces_nova[j + 4] == j + 4:
+                    return 15
+                else:
+                    return 0
     
         
 
