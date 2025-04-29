@@ -71,5 +71,5 @@ def calcula_pontos_regra_simples(faces):
     dicionario [5] = indice5
     dicionario [6] = indice6
 
-        return dicionario
+    return dicionario
 
