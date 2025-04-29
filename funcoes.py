@@ -64,12 +64,12 @@ def calcula_pontos_regra_simples(faces):
             indice6 += 6
 
     dicionario = {}
-    dicionario [1] = indice1
-    dicionario [2] = indice2
-    dicionario [3] = indice3
-    dicionario [4] = indice4
-    dicionario [5] = indice5
-    dicionario [6] = indice6
+    dicionario[1] = indice1
+    dicionario[2] = indice2
+    dicionario[3] = indice3
+    dicionario[4] = indice4
+    dicionario[5] = indice5
+    dicionario[6] = indice6
 
     return dicionario
 
