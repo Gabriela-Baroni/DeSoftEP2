@@ -79,4 +79,15 @@ def calcula_pontos_soma(faces):
         soma = soma + i
     return soma
 
+def calcula_pontos_sequencia_baixa(faces):
+    faces.sort()
+    for i in faces:
+        if faces[i + 1] == i + 1 and faces[i + 2] == i + 2 and faces[i + 3] == i + 3 and faces[i + 4] == i + 4:
+            return 15
+        else:
+            return 0
+
+        
+
+
 
