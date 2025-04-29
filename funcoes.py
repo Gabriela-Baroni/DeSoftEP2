@@ -92,7 +92,7 @@ def calcula_pontos_sequencia_baixa(faces):
         faces_nova.sort()
         for j in range(len(faces_nova) - 1):
             if faces_nova[j] + 1 == faces_nova[j + 1]:
-                    contagem = contagem + 1
+                contagem = contagem + 1
             else:
                 if contagem < 4:
                     contagem = 0
