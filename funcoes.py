@@ -90,8 +90,8 @@ def calcula_pontos_sequencia_baixa(faces):
 
     else:
         faces_nova.sort()
-        for i in faces_nova:
-            if faces_nova[i + 1] == i + 1 and faces_nova[i + 2] == i + 2 and faces_nova[i + 3] == i + 3 and faces_nova[i + 4] == i + 4:
+        for j in faces_nova:
+            if faces_nova[j + 1] == j + 1 and faces_nova[j + 2] == j + 2 and faces_nova[j + 3] == j + 3 and faces_nova[j + 4] == j + 4:
                 return 15
             else:
                 return 0
