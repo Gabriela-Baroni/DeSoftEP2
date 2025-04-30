@@ -122,14 +122,14 @@ def calcula_pontos_sequencia_alta(faces):
         else:
                 return 0
         
-def calcula_pontos_full_house(5_faces):
-    5_faces.sort()
-    if 5_faces[0] == 5_faces[1] == 5_faces[2] == 5_faces[3] == 5_faces[4]:
+def calcula_pontos_full_house(faces):
+    faces.sort()
+    if faces[0] == faces[1] == faces[2] == faces[3] == faces[4]:
         soma = 0
-    elif 5_faces[0] == 5_faces[1] == 5_faces[2] and 5_faces[3] == 5_faces[4]:
-        soma = 5_faces[0] + 5_faces[1] + 5_faces[2] + 5_faces[3] + 5_faces[4]
-    elif 5_faces[0] == 5_faces[1] and  5_faces[2] == 5_faces[3] == 5_faces[4]:
-        soma =  5_faces[0] + 5_faces[1] + 5_faces[2] + 5_faces[3] + 5_faces[4]
+    elif faces[0] == faces[1] == faces[2] and faces[3] == faces[4]:
+        soma = faces[0] + faces[1] + faces[2] + faces[3] + faces[4]
+    elif faces[0] == faces[1] and  faces[2] == faces[3] == faces[4]:
+        soma =  faces[0] + faces[1] + faces[2] + faces[3] + faces[4]
     else:
         soma = 0
     return soma
