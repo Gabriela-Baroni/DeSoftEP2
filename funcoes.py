@@ -100,6 +100,27 @@ def calcula_pontos_sequencia_baixa(faces):
                 return 15
         else:
                 return 0
+
+def calcula_pontos_sequencia_alta(faces):
+    if len(faces) < 5:
+        return 0
+    else: 
+        faces_nova = []
+        for i in faces:
+            if i not in faces_nova:
+                faces_nova.append(i)
+        contagem = 1
+        faces_nova.sort()
+        for j in range(len(faces_nova) - 1):
+            if faces_nova[j] + 1 == faces_nova[j + 1]:
+                contagem = contagem + 1
+            else:
+                if contagem < 5:
+                    contagem = 0
+        if contagem >= 5:
+                return 30
+        else:
+                return 0
                
     
         
