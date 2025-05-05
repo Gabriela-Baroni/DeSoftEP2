@@ -181,13 +181,13 @@ def calcula_pontos_regra_avancada(faces_a):
     sem_combinacao = calcula_pontos_soma(faces_a)
     sequencia_alta = calcula_pontos_sequencia_alta(faces_a)
     sequencia_baixa = calcula_pontos_sequencia_baixa(faces_a)
-    dicionario ={
+    dicionario = {
     "cinco_iguais": cinco_iguais,
     "full_house": full_house,
     "quadra": quadra,
     "sem_combinacao": sem_combinacao,
-    "seuquencia_alta": sequencia_alta,
-    "seuquencia_baixa": sequencia_baixa
+    "sequencia_alta": sequencia_alta,
+    "sequencia_baixa": sequencia_baixa
     }
     return dicionario
 
