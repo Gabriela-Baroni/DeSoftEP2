@@ -134,6 +134,27 @@ def calcula_pontos_full_house(faces):
         soma = 0
     return soma
     
+def calcula_pontos_quadra(faces):
+    faces.sort()
+    soma = 1
+    quadra = 0
+    if len(faces) < 4:
+        quadra = 0
+    else:
+        for i in range(len(faces) - 1):
+            if faces[i] == faces[i + 1]:
+                soma = soma + 1
+            else:
+                if soma < 4:
+                    soma = 1
+    if soma >= 4:
+        for m in range(len(faces)):
+            quadra = quadra + faces[m]
+    else:
+        quadra = 0
+    return quadra
+    
+
 
 
                
