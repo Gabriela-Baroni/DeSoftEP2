@@ -166,7 +166,7 @@ def calcula_pontos_quina(faces):
             else:
                 if soma < 5:
                     soma = 1
-    if soma >= %:
+    if soma >= 5:
         return 50
     else:
         return 0
