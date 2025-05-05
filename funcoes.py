@@ -153,12 +153,13 @@ def calcula_pontos_quadra(faces):
     else:
         quadra = 0
     return quadra
-    
+
+
 def calcula_pontos_quina(faces):
     faces.sort()
     soma = 1
     if len(faces) < 5:
-        return 0
+        quina = 0
     else:
         for i in range(len(faces) - 1):
             if faces[i] == faces[i + 1]:
@@ -167,9 +168,10 @@ def calcula_pontos_quina(faces):
                 if soma < 5:
                     soma = 1
     if soma >= 5:
-        return 50
+        quina = 50
     else:
-        return 0
+        quina = 0
+    return quina
 
 
                
