@@ -187,7 +187,8 @@ def calcula_pontos_regra_avancada(faces_a):
     "quadra": quadra
     "sem_combinacao": sem_combinacao
     "seuquencia_alta": sequencia_alta
-    "seuquencia_baixa": sequencia_baixa}
+    "seuquencia_baixa": sequencia_baixa
+    }
     return dicionario
 
 
