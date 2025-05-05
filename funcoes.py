@@ -175,14 +175,14 @@ def calcula_pontos_quina(faces):
 
 
 def calcula_pontos_regra_avancada(faces_a):
-    quina = calcula_pontos_quina(faces_a)
+    cinco_iguais = calcula_pontos_quina(faces_a)
     full_house = calcula_pontos_full_house(faces_a)
     quadra = calcula_pontos_quadra(faces_a)
     sem_combinacao = calcula_pontos_soma(faces_a)
     sequencia_alta = calcula_pontos_sequencia_alta(faces_a)
     sequencia_baixa = calcula_pontos_sequencia_baixa(faces_a)
     dicionario = {}
-    dicionario["quina"] = quina
+    dicionario["cinco_iguais"] = cinco_iguais
     dicionario["full_house"] = full_house
     dicionario["quadra"] = quadra
     dicionario["sem_combinacao"] = sem_combinacao
