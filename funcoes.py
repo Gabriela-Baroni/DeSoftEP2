@@ -191,15 +191,15 @@ def calcula_pontos_regra_avancada(faces_a):
     }
     return dicionario
 
-def faz_jogada(dados,string,cartela_de_pontos):
+def faz_jogada(faces, string, cartela_de_pontos):
     if string in ["1","2","3","4","5","6"]:
         indice = int(string)
         if cartela_de_pontos["regra_simples"][indice] == -1:
-            resultado = calcula_pontos_regra_simples(dados)
+            resultado = calcula_pontos_regra_simples(faces)
             cartela_de_pontos["regra_simples"][indice] = resultado[indice]
         else:
             if cartela_de_pontos["regra_avancada"][string] == -1:
-                resultado = calcula_pontos_regra_avancada(dados)
+                resultado = calcula_pontos_regra_avancada(faces)
                 cartela_de_pontos["regra_avancada"][string] = resultado[string]
     return cartela_de_pontos
 
