@@ -195,12 +195,12 @@ def faz_jogada(dados,string,cartela_de_pontos):
     if string in ["1","2","3","4","5","6"]:
         indice = int(string)
         if cartela_de_pontos["regra_simples"][indice] == -1:
-            simples = calcula_pontos_regra_simples(dados)
-            cartela_de_pontos["regra_simples"][indice] = simples[indice]
+            resultado = calcula_pontos_regra_simples(dados)
+            cartela_de_pontos["regra_simples"][indice] = resultado[indice]
         else:
             if cartela_de_pontos["regra_avancada"][string] == -1:
-                avancado = calcula_pontos_regra_avancada(dados)
-                cartela_de_pontos["regra_avancada"][string] = avancado[string]
+                resultado = calcula_pontos_regra_avancada(dados)
+                cartela_de_pontos["regra_avancada"][string] = resultado[string]
     return cartela_de_pontos
 
 
