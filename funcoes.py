@@ -199,8 +199,8 @@ def faz_jogada(dados, string, cartela_de_pontos):
             cartela_de_pontos["regra_simples"][indice] = resultado[indice]
     else:
         if cartela_de_pontos["regra_avancada"][string] == -1:
-                resultado = calcula_pontos_regra_avancada(dados)
-                cartela_de_pontos["regra_avancada"][string] = resultado[string]
+            resultado = calcula_pontos_regra_avancada(dados)
+            cartela_de_pontos["regra_avancada"][string] = resultado[string]
     return cartela_de_pontos
 
 
