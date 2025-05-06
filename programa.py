@@ -60,7 +60,7 @@ while rodada <= 12:
         #opção 3 (rolar novamente):
         elif opcao == 3:
             if rolagem < 2:
-                tamanho = len(rolar)
+                tamanho = len(rolados)
                 rolados = rolar_dados(tamanho)
                 rolagem = rolagem + 1
             else:
