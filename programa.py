@@ -112,9 +112,7 @@ while rodada < 12:
                             print("Essa combinação já foi utilizada.")
                     else:
                         print("Combinação inválida. Tente novamente.")
-                else:
-                    print("Combinação inválida. Tente novamente.")
-                 
+
 
                 elif string == 'sem_combinacao' or string == 'quadra' or string == 'full_house' or string == 'sequencia_baixa' or string == 'sequencia_alta' or string == 'cinco_iguais':
                     if cartela_de_pontos['regra_avancada'][string] == -1:
@@ -123,6 +121,9 @@ while rodada < 12:
                         cada_rodada = False
                     else:
                         print("Essa combinação já foi utilizada.")
+                
+                else:
+                    print("Combinação inválida. Tente novamente.")
 
            
         
