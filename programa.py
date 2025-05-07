@@ -20,7 +20,7 @@ cartela_de_pontos = {
     }
 }
 
-cartela = imprime_cartela(cartela_de_pontos)
+imprime_cartela(cartela_de_pontos)
 
 rodada = 0
 while rodada < 12:
@@ -34,7 +34,6 @@ while rodada < 12:
         print("Dados rolados: {0}".format(rolados))
         print("Dados guardados: {0}".format(guardados))
         print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
-        opcao = int(input())
         
         opcao_valida = False
         while not opcao_valida:
@@ -52,7 +51,7 @@ while rodada < 12:
         #opção 1 (guardar um dado):
         if opcao == 1:
             print("Digite o índice do dado a ser guardado (0 a 4):")
-            indice = int(input())
+            indice = input()
             if indice.isdigit():
                 indice_int = int(indice)
                 if indice_int >= 0 and indice_int <= 4:
@@ -65,7 +64,7 @@ while rodada < 12:
         #opção 2 (remover um dado):
         elif opcao == 2:
             print("Digite o índice do dado a ser removido (0 a 4):")
-            indice2 = int(input())
+            indice2 = input()
             if indice2.isdigit():
                 indice2_int = int(indice2)
                 if indice2_int >= 0 and indice2_int <= 4:
@@ -89,7 +88,7 @@ while rodada < 12:
         
         #opção 4 (verificar a cartela):
         elif opcao == 4:
-            cartela = imprime_cartela(cartela_de_pontos)
+            imprime_cartela(cartela_de_pontos)
 
 
         #opção 0 (fazer a jogada):
@@ -99,7 +98,7 @@ while rodada < 12:
             print("Digite a combinação desejada:")
             
             while jogada == False:
-                string = str(input())
+                string = input()
                 
                 if string.isdigit():
                     string_int = int(string)
@@ -130,7 +129,7 @@ while rodada < 12:
     rodada = rodada + 1
 
 
-cartela = imprime_cartela(cartela_de_pontos)
+imprime_cartela(cartela_de_pontos)
 
 
 #total regra simples
@@ -145,7 +144,7 @@ for chave_s in cartela_de_pontos["regra_simples"]:
 
 total_a = 0
 for chave_a in cartela_de_pontos["regra_avancada"]:
-    ponto_a = cartela_de_pontos['regra_simples'][chave_a]
+    ponto_a = cartela_de_pontos['regra_avancada'][chave_a]
     if ponto_a != -1:
         total_a = total_a + ponto_a
 
