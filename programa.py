@@ -55,7 +55,7 @@ while rodada < 12:
             indice = int(input())
             if indice.isdigit():
                 indice_int = int(indice)
-                if indice_int >= and indice_int <= 4:
+                if indice_int >= 0 and indice_int <= 4:
                     guardados.append(rolados.pop(indice_int))
                 else:
                     print("Opção inválida. Tente novamente.")
