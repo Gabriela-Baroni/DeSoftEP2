@@ -79,9 +79,9 @@ while rodada < 12:
         #opção 3 (rolar novamente):
         elif opcao == 3:
             if rolagem < 2:
+                rolagem = rolagem + 1
                 tamanho = len(rolados)
                 rolados = rolar_dados(tamanho)
-                rolagem = rolagem + 1
             else:
                 print("Você já usou todas as rerrolagens.")
         
@@ -99,8 +99,16 @@ while rodada < 12:
             
             while jogada == False:
                 string = input()
+
+                if string == 'sem_combinacao' or string == 'quadra' or string == 'full_house' or string == 'sequencia_baixa' or string == 'sequencia_alta' or string == 'cinco_iguais':
+                    if cartela_de_pontos['regra_avancada'][string] == -1:
+                        faz_jogada(dados, string, cartela_de_pontos)
+                        jogada = True
+                        cada_rodada = False
+                    else:
+                        print("Essa combinação já foi utilizada.")
                 
-                if string.isdigit():
+                elif string.isdigit():
                     string_int = int(string)
                     if string_int in cartela_de_pontos['regra_simples']:
                         if cartela_de_pontos['regra_simples'][string_int] == -1:
@@ -111,16 +119,6 @@ while rodada < 12:
                             print("Essa combinação já foi utilizada.")
                     else:
                         print("Combinação inválida. Tente novamente.")
-
-
-                elif string == 'sem_combinacao' or string == 'quadra' or string == 'full_house' or string == 'sequencia_baixa' or string == 'sequencia_alta' or string == 'cinco_iguais':
-                    if cartela_de_pontos['regra_avancada'][string] == -1:
-                        faz_jogada(dados, string, cartela_de_pontos)
-                        jogada = True
-                        cada_rodada = False
-                    else:
-                        print("Essa combinação já foi utilizada.")
-                
                 else:
                     print("Combinação inválida. Tente novamente.")
 
@@ -136,7 +134,7 @@ imprime_cartela(cartela_de_pontos)
 
 total_s = 0
 for chave_s in cartela_de_pontos["regra_simples"]:
-    ponto_s = cartela_de_pontos['regra_simples'][chave_s]
+    ponto_s = cartela_de_pontos["regra_simples"][chave_s]
     if ponto_s != -1:
         total_s = total_s + ponto_s
 
@@ -144,7 +142,7 @@ for chave_s in cartela_de_pontos["regra_simples"]:
 
 total_a = 0
 for chave_a in cartela_de_pontos["regra_avancada"]:
-    ponto_a = cartela_de_pontos['regra_avancada'][chave_a]
+    ponto_a = cartela_de_pontos["regra_avancada"][chave_a]
     if ponto_a != -1:
         total_a = total_a + ponto_a
 
